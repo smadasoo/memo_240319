@@ -10,4 +10,23 @@
 		FROM
 			`post`
 	</select>
+	
+	<select id="getPostListByUserId" parameterType="int" resultType="com.memo.post.domain.Post">
+		SELECT
+			`id`
+			,`userId`
+			,`content`
+			,`imagePath`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`post`
+		WHERE	
+			`userId` = #{userId}	
+	</select>
+	
+	<select id="savePostMapperByLoginId" resultType="map">
+		SELECT
+			*
+	</select>
 </mapper>
