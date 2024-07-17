@@ -6,14 +6,14 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/memo_240319?characterEncoding=UTF-8
-    usernmae: root
+    username: root
     password: root
   jpa:
     show-sql: true
     hibernate:
        ddl-auto: none
        naming:
-          implicait-strategy:  org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+          implicit-strategy:  org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
       hibernate:

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.ibatis.annotations.Param;
 
 import com.memo.post.domain.Post;
 
@@ -15,5 +15,11 @@ public interface PostMapper {
 	
 	public List<Post> selectPostListByUserId(int userId);
 	
-	public Map<Object, String> savePostListByUserId(int userId);
+	public void insertPost(
+			@Param("userId") int userId, 
+			@Param("subject") String subject, 
+			@Param("content") String content, 
+// multil는 DB에에에 넣을수 있는 타입이 아니므로 String 으로 바꾸어주어야함
+//			@Param("imagePath") MultipartFile imagePath);
+			@Param("imagePath") String imagePath);
 }

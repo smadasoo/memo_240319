@@ -20,7 +20,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder(toBuilder = true)
+@Builder
 @Getter
 @Table(name = "user")
 @Entity
@@ -46,3 +46,4 @@ public class UserEntity {
 	@Column(name = "updatedAt")
 	private LocalDateTime updatedAt;
 }
+

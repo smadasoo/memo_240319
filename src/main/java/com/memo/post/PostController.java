@@ -26,7 +26,7 @@ public class PostController {
 		Integer userId = (Integer)session.getAttribute("userId");
 		if (userId == null) {
 			// 비로그인이면 로그인 페이지로 이동
-			return "rediredct:/user/sign-in-view";
+			return "redirect:/user/sign-in-view";
 		}
 		
 		// DB 조회 - 글 목록

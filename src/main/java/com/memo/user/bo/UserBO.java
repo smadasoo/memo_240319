@@ -9,6 +9,7 @@ import com.memo.user.repository.UserRepository;
 @Service
 public class UserBO {
 	
+	
 	@Autowired
 	private UserRepository userRepository;
 	
