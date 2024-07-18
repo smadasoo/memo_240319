@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
-	xmlns:th="http://www.thymeleaf.org" 
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorate="~{layout/defaultLayout}">
+<html 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/defaultLayout}">
 <section layout:fragment="content" class="contents d-flex justify-content-center">
 	<div class="w-50">
 		<h1>글목록</h1>
-		[[{postMapper}]]
 		
 		<table class="table">
 			<thead>
@@ -21,19 +19,23 @@
 			<tbody>
 				<tr th:each="post : ${postList}">
 					<td th:text="${post.id}">1</td>
-					<td th:text="${post.subject}">제목</td>
+					<!-- <td><a th:href="@{/post/post-detail-view(postId=${post.id}, userId=13)}" th:text="${post.subject}"></a></td> -->
+					<td><a th:href="|/post/post-detail-view?postId=${post.id}|" th:text="${post.subject}"></a></td>
 					<td th:text="${#temporals.format(post.createdAt, 'yyyy년 M월 d일 HH:mm:ss')}">2024-07-16</td>
 					<td th:text="${#temporals.format(post.updatedAt, 'yyyy년 M월 d일 HH:mm:ss')}">2024-07-16</td>
 				</tr>
 			</tbody>
 		</table>
 		
-		<a href="/post/post-create-view" class="btn btn-info">글쓰기</a>
+		<!-- 글쓰기 버튼  -->
+		<div class="d-flex justify-content-end">
+			<a href="/post/post-create-view" class="btn btn-warning">글쓰기</a>
+		</div>
 	</div>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+</section>
 
-</body>
-</html>
+<th:block layout:fragment="script">
+    <script>
+
+    </script>
+</th:block>

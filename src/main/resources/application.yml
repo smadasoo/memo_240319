@@ -17,6 +17,6 @@ spring:
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
       hibernate:
-      format_sql: true
+      "[format_sql]": true
 mybatis:
   mapper-locations: mappers/*Mapper.xml

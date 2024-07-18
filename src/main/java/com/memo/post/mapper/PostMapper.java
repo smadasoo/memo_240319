@@ -19,7 +19,9 @@ public interface PostMapper {
 			@Param("userId") int userId, 
 			@Param("subject") String subject, 
 			@Param("content") String content, 
-// multil는 DB에에에 넣을수 있는 타입이 아니므로 String 으로 바꾸어주어야함
-//			@Param("imagePath") MultipartFile imagePath);
 			@Param("imagePath") String imagePath);
+	
+	public Post selectPostByPostIdUserId(
+			@Param("userId") int userId, 
+			@Param("postId") int postId);
 }
