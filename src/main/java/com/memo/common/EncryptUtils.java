@@ -3,7 +3,6 @@ package com.memo.common;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-// 해싱을 해주는 클래스
 public class EncryptUtils {
 
 	// input: 원본 비밀번호

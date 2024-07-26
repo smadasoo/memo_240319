@@ -1,4 +1,4 @@
-package com.memo.user.enetity;
+package com.memo.user.entity;
 
 import java.time.LocalDateTime;
 
@@ -46,4 +46,3 @@ public class UserEntity {
 	@Column(name = "updatedAt")
 	private LocalDateTime updatedAt;
 }
-

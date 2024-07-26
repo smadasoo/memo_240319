@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.memo.common.EncryptUtils;
 import com.memo.user.bo.UserBO;
-import com.memo.user.enetity.UserEntity;
+import com.memo.user.entity.UserEntity;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
